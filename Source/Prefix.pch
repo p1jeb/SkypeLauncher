@@ -1,0 +1,8 @@
+//
+// Prefix header for all source files of the 'Skype Launcher' target in the 'Skype Launcher' project
+//
+
+#ifdef __OBJC__
+	#import <Cocoa/Cocoa.h>
+	#import <Security/Security.h>
+#endif
