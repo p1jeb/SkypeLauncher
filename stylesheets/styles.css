@@ -46,58 +46,12 @@ a small {
 }
 
 .wrapper {
-  width:860px;
+  width:600px;
   margin:0 auto;
-}
-
-blockquote {
-  border-left:1px solid #e5e5e5;
-  margin:0;
-  padding:0 0 0 20px;
-  font-style:italic;
-}
-
-code, pre {
-  font-family:Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal;
-  color:#333;
-  font-size:12px;
-}
-
-pre {
-  padding:8px 15px;
-  background: #f8f8f8;  
-  border-radius:5px;
-  border:1px solid #e5e5e5;
-  overflow-x: auto;
-}
-
-table {
-  width:100%;
-  border-collapse:collapse;
-}
-
-th, td {
-  text-align:left;
-  padding:5px 10px;
-  border-bottom:1px solid #e5e5e5;
-}
-
-dt {
-  color:#444;
-  font-weight:700;
-}
-
-th {
-  color:#444;
 }
 
 img {
   max-width:100%;
-}
-
-header {
-  width:320px;
-  position:fixed;
 }
 
 header ul {
@@ -117,11 +71,11 @@ header ul {
   border-radius:5px;
   border:1px solid #d2d2d2;
   box-shadow:inset #fff 0 1px 0, inset rgba(0,0,0,0.03) 0 -1px 0;
-  width:270px;
+  width:364px;
 }
 
 header li {
-  width:89px;
+  width:120px;
   float:left;
   border-right:1px solid #d2d2d2;
   height:40px;
@@ -129,8 +83,8 @@ header li {
 
 header ul a {
   line-height:1;
-  font-size:11px;
-  color:#999;
+  font-size:10px;
+  color:#000;
   display:block;
   text-align:center;
   padding-top:6px;
@@ -143,111 +97,29 @@ strong {
 }
 
 header ul li + li {
-  width:88px;
+  width:120px;
   border-left:1px solid #fff;
 }
 
 header ul li + li + li {
   border-right:none;
-  width:89px;
+  width:120px;
 }
 
 header ul a strong {
   font-size:14px;
   display:block;
   color:#222;
-}
-
-section {
-  width:500px;
-  float:right;
-  padding-bottom:50px;
+  padding-top:3px;
 }
 
 small {
   font-size:11px;
 }
 
-hr {
-  border:0;
-  background:#e5e5e5;
-  height:1px;
-  margin:0 0 20px;
-}
-
 footer {
-  width:320px;
+  width:600px;
   position:fixed;
   bottom:50px;
 }
 
-@media print, screen and (max-width: 960px) {
-  
-  div.wrapper {
-    width:auto;
-    margin:0;
-  }
-  
-  header, section, footer {
-    float:none;
-    position:static;
-    width:auto;
-  }
-  
-  header {
-    padding-right:320px;
-  }
-  
-  section {
-    border:1px solid #e5e5e5;
-    border-width:1px 0;
-    padding:20px 0;
-    margin:0 0 20px;
-  }
-  
-  header a small {
-    display:inline;
-  }
-  
-  header ul {
-    position:absolute;
-    right:50px;
-    top:52px;
-  }
-}
-
-@media print, screen and (max-width: 720px) {
-  body {
-    word-wrap:break-word;
-  }
-  
-  header {
-    padding:0;
-  }
-  
-  header ul, header p.view {
-    position:static;
-  }
-  
-  pre, code {
-    word-wrap:normal;
-  }
-}
-
-@media print, screen and (max-width: 480px) {
-  body {
-    padding:15px;
-  }
-  
-  header ul {
-    display:none;
-  }
-}
-
-@media print {
-  body {
-    padding:0.4in;
-    font-size:12pt;
-    color:#444;
-  }
-}
