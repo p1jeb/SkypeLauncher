@@ -10,10 +10,12 @@ body {
 h1, h2, h3, h4, h5, h6 {
   color:#222;
   margin:0 0 20px;
+  text-align:center;
 }
 
 p, ul, ol, table, pre, dl {
   margin:0 0 20px;
+  text-align:center;
 }
 
 h1, h2, h3 {
