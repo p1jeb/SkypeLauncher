@@ -15,11 +15,17 @@ int main(int argc, const char * argv[])
 {
 	@autoreleasepool
 	{
-		NSArray *apps = [[NSWorkspace sharedWorkspace] runningApplications];
-		NSString *skype = @"/Applications/Skype.app/Contents/MacOS/Skype";
+		NSWorkspace *workspace = [NSWorkspace sharedWorkspace];
+		NSArray *apps = [workspace runningApplications];
+		NSString *skypePath = [workspace absolutePathForAppBundleWithIdentifier:@"com.skype.skype"];
 		pid_t loginWindowPid = 0, skypePid = 0;
 		
-		if ([[NSFileManager defaultManager] fileExistsAtPath:skype] == NO)
+		if ( skypePath.length )
+			skypePath = [skypePath stringByAppendingString:@"/Contents/MacOS/Skype"];
+		else
+			skypePath = @"/Applications/Skype.app/Contents/MacOS/Skype";
+		
+		if ([[NSFileManager defaultManager] fileExistsAtPath:skypePath] == NO)
 		{
 			[[NSAlert alertWithMessageText:@"Error"
 							 defaultButton:@"Quit"
@@ -46,10 +52,10 @@ int main(int argc, const char * argv[])
 		
 		if ( 0 == skypePid )
 		{
-			[[NSWorkspace sharedWorkspace] launchApplicationAtURL:[NSURL fileURLWithPath:skype]
-														  options:0
-													configuration:NULL
-															error:NULL];
+			[workspace launchApplicationAtURL:[NSURL fileURLWithPath:skypePath]
+									  options:0
+								configuration:NULL
+										error:NULL];
 		}
 		else if ( 0 != loginWindowPid)
 		{
@@ -67,7 +73,7 @@ int main(int argc, const char * argv[])
 					"launchctl",
 					"bsexec",
 					NULL,
-					(char*)skype.fileSystemRepresentation, NULL};
+					(char*)skypePath.fileSystemRepresentation, NULL};
 				
 				args[5] = (char*)&pid;
 				
