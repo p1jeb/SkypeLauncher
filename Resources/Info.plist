@@ -9,7 +9,7 @@
 	<key>CFBundleIconFile</key>
 	<string>SkypeLauncher.icns</string>
 	<key>CFBundleIdentifier</key>
-	<string>zp.ua.holodnyalex.skypelauncher</string>
+	<string>com.holodnyalex.skypelauncher</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>

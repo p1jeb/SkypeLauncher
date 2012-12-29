@@ -31,7 +31,7 @@ int main(int argc, const char * argv[])
 							 defaultButton:@"Quit"
 						   alternateButton:nil
 							   otherButton:nil
-				 informativeTextWithFormat:@"Skype app not found"]
+				 informativeTextWithFormat:@"Skype.app not found"]
 			 runModal];
 			
 			return -1;
@@ -89,7 +89,7 @@ int main(int argc, const char * argv[])
 							 defaultButton:@"Quit"
 						   alternateButton:nil
 							   otherButton:nil
-				 informativeTextWithFormat:@"No loginwindow found"]
+				 informativeTextWithFormat:@"loginwindow.app not launched"]
 			 runModal];
 		}
 	}
