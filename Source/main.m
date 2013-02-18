@@ -18,6 +18,7 @@ int main(int argc, const char * argv[])
 		NSWorkspace *workspace = [NSWorkspace sharedWorkspace];
 		NSArray *apps = [workspace runningApplications];
 		NSString *skypePath = [workspace absolutePathForAppBundleWithIdentifier:@"com.skype.skype"];
+		NSString *helperPath = [[NSBundle mainBundle] pathForAuxiliaryExecutable:@"Skype Launcher Helper"];
 		pid_t loginWindowPid = 0, skypePid = 0;
 		
 		if ( skypePath.length )
@@ -65,19 +66,10 @@ int main(int argc, const char * argv[])
 			
 			if (acquirePrivileges())
 			{
+				char *args[] = {(char*)&pid, (char*)skypePath.fileSystemRepresentation, NULL};
 				FILE *pipe = NULL;
-				char * args[] = {
-					"-u",
-					"root",
-					"/",
-					"launchctl",
-					"bsexec",
-					NULL,
-					(char*)skypePath.fileSystemRepresentation, NULL};
 				
-				args[5] = (char*)&pid;
-				
-				AuthorizationExecuteWithPrivileges(_authorizationRef, "/usr/sbin/chroot", kAuthorizationFlagDefaults, args, &pipe);
+				AuthorizationExecuteWithPrivileges(_authorizationRef, helperPath.fileSystemRepresentation, kAuthorizationFlagDefaults, args, &pipe);
 				
 				releasePrivileges();
 				return 0;

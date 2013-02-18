@@ -1,0 +1,11 @@
+#!/bin/sh
+
+#  Skype Launcher Helper
+#  SkypeLauncher
+#
+#  Created by Alexander Holodny on 2/18/13.
+#  Copyright (c) 2013 Alexander Holodny. All rights reserved.
+
+
+/bin/rm -f /var/root/Library/Application\ Support/Skype/Skype.pid
+/usr/sbin/chroot -u root / launchctl bsexec $1 $2

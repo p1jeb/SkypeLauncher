@@ -11,7 +11,21 @@
 		16C20185166619AF0067BF52 /* SkypeLauncher.icns in Resources */ = {isa = PBXBuildFile; fileRef = 16C20183166619AF0067BF52 /* SkypeLauncher.icns */; };
 		16C20186166619CC0067BF52 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1652D08016650D4E005E3F84 /* main.m */; };
 		16C2018716661A000067BF52 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16C20159166614EF0067BF52 /* Security.framework */; };
+		16F1DD8816D2C9BC00EC50BA /* Skype Launcher Helper in CopyFiles */ = {isa = PBXBuildFile; fileRef = 16F1DD8516D2C64000EC50BA /* Skype Launcher Helper */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		16F1DD8716D2C9B500EC50BA /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 6;
+			files = (
+				16F1DD8816D2C9BC00EC50BA /* Skype Launcher Helper in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1652D07D16650D4E005E3F84 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -24,6 +38,7 @@
 		16C2016A166619710067BF52 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		16C20182166619AF0067BF52 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		16C20183166619AF0067BF52 /* SkypeLauncher.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = SkypeLauncher.icns; sourceTree = "<group>"; };
+		16F1DD8516D2C64000EC50BA /* Skype Launcher Helper */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "Skype Launcher Helper"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +85,7 @@
 		1652D07F16650D4E005E3F84 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				16F1DD8516D2C64000EC50BA /* Skype Launcher Helper */,
 				1652D08016650D4E005E3F84 /* main.m */,
 				1652D08316650D4E005E3F84 /* Prefix.pch */,
 			);
@@ -105,6 +121,7 @@
 				16C20160166619700067BF52 /* Sources */,
 				16C20161166619700067BF52 /* Frameworks */,
 				16C20162166619700067BF52 /* Resources */,
+				16F1DD8716D2C9B500EC50BA /* CopyFiles */,
 			);
 			buildRules = (
 			);
